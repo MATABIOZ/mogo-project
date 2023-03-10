@@ -1,0 +1,13 @@
+{
+  "name": "mogo-project",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "parcel index.html --open"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-less": "^2.8.3",
+    "less": "^4.1.3",
+    "parcel": "^2.8.3"
+  }
+}
