@@ -19,4 +19,108 @@ body {
 		width: 100%;
 		background-color: @background-color-white;
 	}
+	
+	&_red {
+		width: 100%;
+		background-color: @background-color-froly;
+	}
+}
+
+.section-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+
+	&__subtitle {
+		width: 100%;
+		padding: 18px 0;
+
+		h3 {
+			font-family: @sub-font;
+			.font-sizes_400-30-44 ();
+		}
+	}
+
+	&__title {
+		width: 100%;
+		padding: 19px 0;
+		margin-bottom: 20px;
+
+		h2 {
+			.font-sizes_900-36-42 ();
+			text-transform: uppercase;
+		}
+	}
+
+	&__description {
+		width: 100%;
+		padding: 38px 0;
+
+		h5 {
+			.font-sizes_400-18-21 ();
+			color: @text-color-black;
+		}
+	}
+}
+
+.example {
+	position: relative;
+
+	&:first-child img {
+		opacity: 0;
+	}
+
+	&:nth-child(n+2) &__team {
+		display: none;
+	}
+
+	&__image {
+		background-color: @background-color-morning-glory;
+	}
+
+	&__team {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		background-image: @background-color-gradient;
+		transition: all linear .2s;
+
+		a {
+			width: 100%;
+			height: 100%;
+			.font-sizes_500-24-28 ();
+			text-transform: uppercase;
+			text-decoration: none;
+			color: @text-color-white;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			&::before {
+				content: @icon-add;
+				.icon-styles ();
+				font-size: 40px;
+				display: inline-block;
+			}
+		}
+
+		&:hover {
+			transform: translate(-16px, -16px);
+		}
+
+		&:active {
+			transform: translate(0);
+
+			a {
+				color: @text-color-shark;
+			}
+		}
+	}
 }
