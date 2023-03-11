@@ -1,0 +1,83 @@
+.banner {
+
+	&__wrapper {
+		width: 100%;
+		background-image: @background-color-gradient, url(../../images/banner.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		padding: 0 16px;
+	}
+
+	&__inner {
+		max-width: 1170px;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	&__subtitle {
+		width: 100%;
+		padding-top: 77px;
+
+		h3 {
+			font-family: @sub-font;
+			.font-sizes_400-64-80 ();
+			color: @text-color-white;
+		}
+	}
+
+	&__title {
+		width: 100%;
+		padding: 9px 0;
+		margin-bottom: 42px;
+
+		h1 {
+			font-family: @h1-font;
+			.font-sizes_700-144-176 ();
+			color: @text-color-white;
+			white-space: pre-line;
+			text-transform: uppercase;
+
+			span {
+				display: inline-block;
+				transform: translateX(-35px);
+			}
+		}
+	}
+
+	&__button {
+		padding: 75px 0;
+		margin-bottom: 25px;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+
+		button {
+			width: 369px;
+			height: 78px;
+			background: none;
+			outline: none;
+			border: 4px solid @background-color-white;
+			color: @text-color-white;
+			cursor: pointer;
+			.font-sizes_700-24-28 ();
+			text-transform: uppercase;
+			transition: all linear .2s;
+
+			&:hover {
+				background-color: @background-color-white;
+				color: @text-color-gold-sand;
+				border: 4px solid transparent;
+			}
+
+			&:active {
+				background-color: @background-color-white;
+				color: @text-color-gold-sand;
+				border: 4px solid @background-color-gold-sand;
+			}
+		}
+	}
+}

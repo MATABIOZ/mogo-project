@@ -1,0 +1,88 @@
+.header {
+	width: 100%;
+	display: flex;
+	align-items: center;
+
+	&__logo {
+		flex-shrink: 0;
+	}
+
+	&__nav-menu {
+		width: 100%;
+		display: flex;
+		flex: 1;
+		align-items: center;
+		justify-content: flex-end;
+		text-align: center;
+
+		a {
+			.font-sizes_600-14-16 ();
+			color: @text-color-white;
+			text-transform: uppercase;
+			text-decoration: none;
+			width: 85px;
+			margin: 0 15px;
+			padding-bottom: 5px;
+			border-bottom: 1px solid transparent;
+			transition: all linear .2s;
+
+			&:hover {
+				color: @text-color-manhattan;
+				border-bottom: 1px solid @background-color-manhattan;
+			}
+
+			&:active {
+				color: @text-color-shark;
+				border-bottom: 1px solid @background-color-shark;
+			}
+		}
+	}
+
+	&__actives {
+		display: flex;
+
+		::before {
+			margin: 17px;
+			cursor: pointer;
+		}
+
+		:hover {
+
+			&::before {
+				color: @text-color-manhattan;
+			}
+		}
+
+		:active {
+
+			&::before {
+				color: @text-color-shark;
+			}
+		}
+	}
+
+	&__truck {
+
+		&::before {
+			content: @icon-truck;
+			.icon-styles ();
+			font-size: 24px;
+			color: @text-color-white;
+		}
+	}
+
+	&__search {
+
+		&::before {
+			content: @icon-search;
+			.icon-styles ();
+			font-size: 24px;
+			color: @text-color-white;
+			margin-right: 0;
+		}
+
+		input {
+			display: none;
+		}
+	}
+}
