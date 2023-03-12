@@ -1,0 +1,41 @@
+.devices {
+
+	&__wrapper {
+		width: 100%;
+		padding: 42px 16px 50px;
+		background-image: url(../../images/devices-background.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	&__inner {
+		margin: 0 auto;
+		max-width: 1170px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__tablet-background {
+		margin: 57px 0 7px;
+		max-width: 685px;
+		background-image: url(../../images/tablet-background.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 96% 94%;
+		display: flex;
+		justify-content: center;
+		position: relative;
+	}
+
+	&__phone-background {
+		position: absolute;
+		background-image: url(../../images/phone-background.png);
+		background-repeat: no-repeat;
+		background-position: top;
+		bottom: 0;
+		right: 0;
+		transform: translate(42px, 99px);
+	}
+}
