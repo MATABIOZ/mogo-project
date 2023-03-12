@@ -1,0 +1,44 @@
+.futures {
+
+	&__wrapper {
+		width: 100%;
+		background-color: @background-color-morning-glory;
+		padding: 0 16px;
+	}
+
+	&__inner {
+		max-width: 1170px;
+		margin: 0 auto;
+	}
+
+	&__items {
+		padding: 0 1px;
+		background-color: @background-color-white;
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		gap: 1px;
+		min-height: 250px;
+	}
+
+	&__item {
+		background-color: @background-color-morning-glory;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+
+	&__text {
+		
+		color: @text-color-white;
+
+		span {
+			.font-sizes_700-64-75 ();
+		}
+
+		h5 {
+			.font-sizes_500-24-28 ();
+		}
+	}
+}
