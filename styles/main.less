@@ -2,10 +2,13 @@ html {
 	scroll-behavior: smooth;
 }
 
+
+
 body {
 	font-family: @main-font;
 	color: @text-color-shark;
 }
+
 .container {
 	width: 100%;
 }
@@ -158,6 +161,99 @@ body {
 		padding: 19px 0;
 
 		h5 {
+			.font-sizes_400-18-21 ();
+		}
+	}
+}
+
+.tab {
+	display: flex;
+	flex-direction: column;
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border: 1px solid @background-color-silver-sand;
+	}
+
+	&__icon {
+		margin: 0 18px;
+
+		&::before {
+			font-size: 42px;
+			color: @text-color-morning-glory;
+		}
+	}
+
+	&__title {
+		padding: 31px 0;
+		width: 100%;
+		margin-left: 22px;
+
+		h3 {
+			.font-sizes_700-24-28 ();
+			text-transform: uppercase;
+		}
+	}
+
+	&__button {
+		margin: 0 14px;
+		transform: perspective(800px) rotateX(0);
+		
+		&_checked {
+			transform: perspective(800px) rotateX(180deg);
+		}
+
+		button {
+			background: none;
+			border: none;
+			padding: 0;
+			cursor: pointer;
+
+			&:hover::before {
+				filter: invert(30%);
+			}
+
+			&:active::before {
+				filter: invert(100%);
+			}
+		}
+
+		::before {
+			content: url('../images/arrow.svg');
+		}
+	}
+
+	&__text {
+		display: none;
+		padding: 18px 24px 18 22px;
+		border: 1px solid @background-color-silver-sand;
+		border-top: none;
+		max-height: 162px;
+
+		::-webkit-scrollbar {
+			width: 7px;
+		}
+
+		::-webkit-scrollbar-track {
+			background-color: @background-color-wild-sand;
+		}
+		::-webkit-scrollbar-thumb {
+			background-color: @background-color-morning-glory;
+		}
+
+		&-wrapper {
+			max-height: 100%;
+			overflow-y: scroll;
+		}
+
+		&_checked {
+			display: block;
+		}
+
+		p {
+			padding-right: 54px;
 			.font-sizes_400-18-21 ();
 		}
 	}
