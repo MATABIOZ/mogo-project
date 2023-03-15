@@ -50,10 +50,19 @@ body {
 		}
 	}
 
+	&__icon::before {
+		color: @text-color-froly;
+		font-size: 42px;
+	}
+
 	&__title {
 		width: 100%;
 		padding: 19px 0;
 		margin-bottom: 20px;
+
+		&_red {
+			color: @text-color-froly;
+		}
 
 		h2 {
 			.font-sizes_900-36-42 ();
