@@ -1,0 +1,30 @@
+.clients {
+
+	&__wrapper {
+		width: 100%;
+		padding: 42px 16px;
+		background: url(../../images/clients-background.jpg), @background-color-opacity09-white;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		background-blend-mode: screen;
+	}
+
+	&__inner {
+		padding: 0 10px;
+		margin: 0 auto;
+		max-width: 1170px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__cards {
+		padding-top: 42px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		column-gap: 50px;
+		row-gap: 42px;
+	}
+}
