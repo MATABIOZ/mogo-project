@@ -745,7 +745,53 @@ body {
 		display: flex;
 
 		span::before {
-			content: @icon-views;
+			content: @icon-comments;
+		}
+	}
+}
+
+.blog-card {
+	display: flex;
+
+	&__image {
+		flex-shrink: 0;
+	}
+
+	&__text {
+		margin-left: 30px;
+
+		span {
+			display: inline-block;
+			padding: 10px 0;
+			.font-sizes_400-13-15();
+		}
+	}
+
+	&__title {
+		padding: 3px 0;
+
+		h4 {
+			.font-sizes_700-18-21();
+			text-transform: uppercase;
+		}
+	}
+}
+
+.instagram-card {
+	flex-shrink: 0;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+
+	li {
+		transition: all linear .2s;
+
+		&:hover {
+			transform: scale(1.05);
+			filter: contrast(160%);
+		}
+
+		&:active {
+			transform: scale(1);
 		}
 	}
 }
