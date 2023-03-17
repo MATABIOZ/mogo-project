@@ -16,9 +16,21 @@
 		grid-template-columns: repeat(6, 1fr);
 		gap: 82px;
 
-			img {
-				width: 127px;
-				height: 127px;
+		a {
+			display: inline-block;
+			transition: all linear .2s;
+
+			&:hover {
+				transform: scale(1.2);
 			}
+
+			&:active {
+				transform: scale(1);
+			}
+		}
+
+		img {
+			width: 127px;
+		}
 	}
 }

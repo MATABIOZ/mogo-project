@@ -145,6 +145,11 @@ body {
 .card {
 	max-width: 370px;
 	display: flex;
+	transition: all linear .2s;
+
+	&:hover {
+		transform: scale(1.2);
+	}
 
 	&__icon {
 		margin-right: 30px;
@@ -296,6 +301,7 @@ body {
 	}
 
 	&__arrow-prev, &__arrow-next {
+		cursor: pointer;
 
 		&::before {
 			content: url('../images/arrow.svg');
