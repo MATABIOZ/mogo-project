@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>MOGO</title>
+	<link rel="shortcut icon" href="./images/favicon.png" type="image/png">
 	<link rel="stylesheet" href="./index.less">
 </head>
 
@@ -16,18 +17,21 @@
 				<div class="banner__inner">
 					<header class="header">
 						<div class="header__logo">
-							<a href="#"><img src="./images/mogo-header.png" alt="mogo-logo"></a>
+							<img src="./images/mogo-header.png" alt="mogo-logo">
 						</div>
-						<div class="header__nav-menu">
-							<a href="#">about</a>
-							<a href="#">service</a>
-							<a href="#">work</a>
-							<a href="#">blog</a>
-							<a href="#">contact</a>
-						</div>
+						<ul class="header__nav-menu">
+							<li><a href="#">about</a></li>
+							<li><a href="#">service</a></li>
+							<li><a href="#">work</a></li>
+							<li><a href="#">blog</a></li>
+							<li><a href="#">contact</a></li>
+						</ul>
 						<div class="header__actives">
 							<div class="header__truck"><a href="#"></a></div>
-							<div class="header__search"><input type="search"></div>
+							<div class="header__search">
+								<input id="search" type="search" name="search">
+								<label for="search"></label>
+							</div>
 						</div>
 					</header>
 					<div class="banner__subtitle">
@@ -463,14 +467,14 @@
 		<div class="container">
 			<div class="partners__wrapper">
 				<div class="partners__inner">
-					<div class="partners__logos">
-						<img src="./images/partners-logo-1.svg" alt="logo">
-						<img src="./images/partners-logo-2.svg" alt="logo">
-						<img src="./images/partners-logo-3.svg" alt="logo">
-						<img src="./images/partners-logo-4.svg" alt="logo">
-						<img src="./images/partners-logo-5.svg" alt="logo">
-						<img src="./images/partners-logo-6.svg" alt="logo">
-					</div>
+					<ul class="partners__logos">
+						<li><a href="#"><img src="./images/partners-logo-1.svg" alt="logo"></a></li>
+						<li><a href="#"><img src="./images/partners-logo-2.svg" alt="logo"></a></li>
+						<li><a href="#"><img src="./images/partners-logo-3.svg" alt="logo"></a></li>
+						<li><a href="#"><img src="./images/partners-logo-4.svg" alt="logo"></a></li>
+						<li><a href="#"><img src="./images/partners-logo-5.svg" alt="logo"></a></li>
+						<li><a href="#"><img src="./images/partners-logo-6.svg" alt="logo"></a></li>
+					</ul>
 				</div>
 			</div>
 		</div>

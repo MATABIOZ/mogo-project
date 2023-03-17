@@ -2,6 +2,7 @@
 	width: 100%;
 	display: flex;
 	align-items: center;
+	// flex-wrap: wrap;
 
 	&__logo {
 		flex-shrink: 0;
@@ -10,40 +11,47 @@
 	&__nav-menu {
 		width: 100%;
 		display: flex;
+		flex-wrap: wrap;
 		flex: 1;
 		align-items: center;
 		justify-content: flex-end;
 		text-align: center;
 
-		a {
-			.font-sizes_600-14-16 ();
-			color: @text-color-white;
-			text-transform: uppercase;
-			text-decoration: none;
-			width: 85px;
+		li {
+			display: flex;
+			flex: 1;
 			margin: 0 15px;
-			padding-bottom: 5px;
-			border-bottom: 1px solid transparent;
-			transition: all linear .2s;
+			max-width: 85px;
 
-			&:hover {
-				color: @text-color-manhattan;
-				border-bottom: 1px solid @background-color-manhattan;
-			}
-
-			&:active {
-				color: @text-color-shark;
-				border-bottom: 1px solid @background-color-shark;
+			a {
+				display: inline-block;
+				.font-sizes_600-14-16 ();
+				color: @text-color-white;
+				text-transform: uppercase;
+				text-decoration: none;
+				width: 100%;
+				padding: 5px 0;
+				border-bottom: 1px solid transparent;
+				transition: all linear .2s;
+				margin: 5px 0;
+	
+				&:hover {
+					color: @text-color-manhattan;
+					border-bottom: 1px solid @background-color-manhattan;
+				}
+	
+				&:active {
+					color: @text-color-shark;
+					border-bottom: 1px solid @background-color-shark;
+				}
 			}
 		}
+
+		
 	}
 
 	&__actives {
 		display: flex;
-
-		div {
-			margin: 17px;
-		}
 
 		::before {
 			cursor: pointer;
@@ -65,6 +73,7 @@
 	}
 
 	&__truck {
+		margin: 17px;
 
 		&::before {
 			content: @icon-truck;
@@ -75,17 +84,52 @@
 	}
 
 	&__search {
+		margin: 17px;
 		margin-right: 0;
+		display: flex;
 
-		&::before {
-			content: @icon-search;
-			.icon-styles ();
-			font-size: 24px;
-			color: @text-color-white;
+		label {
+
+			&:focus ~ input {
+				width: 190px;
+				padding-left: 10px;
+			}
+
+			&::before {
+				content: @icon-search;
+				.icon-styles ();
+				font-size: 24px;
+				color: @text-color-white;
+			}
 		}
 
 		input {
-			display: none;
+			margin-right: 5px;
+			padding: 0;
+			width: 0;
+			display: flex;
+			align-items: center;
+			outline: none;
+			border: none;
+			border-radius: 15px;
+			transition: all linear .3s;
+			opacity: 0;
+
+			&::-webkit-search-cancel-button {
+				display: none;
+			}
+
+			&:focus {
+				width: 190px;
+				padding-left: 10px;
+				opacity: 1;
+			}
+
+			&:active {
+				width: 190px;
+				padding-left: 10px;
+				opacity: 1;
+			}
 		}
 	}
 }
