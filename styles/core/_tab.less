@@ -7,6 +7,7 @@
 		justify-content: space-between;
 		align-items: center;
 		border: 1px solid @background-color-silver-sand;
+		cursor: pointer;
 	}
 
 	&__icon {
@@ -49,10 +50,7 @@
 	&__button {
 		margin: 0 14px;
 		transform: perspective(800px) rotateX(0);
-		
-		&_checked {
-			transform: perspective(800px) rotateX(180deg);
-		}
+		transition: all linear .3s;
 
 		button {
 			background: none;
@@ -85,21 +83,43 @@
 		}
 	}
 
+	&.tab_checked {
+
+		.tab__button {
+			transform: perspective(800px) rotateX(180deg);
+		}
+
+		.tab__text {
+			max-height: 162px;
+			padding: 18px 24px 18px 22px;
+			border: 1px solid @background-color-silver-sand;
+			border-top: none;
+
+			@media @max1024 {
+				max-height: 138px;
+				padding: 21px 20px 21px 21px;
+			}
+
+			@media @max490 {
+				padding: 9px 25px 9px 21px;
+			}
+		}
+	}
+
 	&__text {
-		display: none;
-		padding: 18px 24px 18px 22px;
-		border: 1px solid @background-color-silver-sand;
+		padding: 0 24px 0 22px;
+		border: 1px solid transparent;
 		border-top: none;
-		max-height: 162px;
+		max-height: 0;
+		transition: all linear .6s;
+		overflow: hidden;
 
 		@media @max1024 {
-			padding: 21px 20px 21px 21px;
-			max-height: 138px;
+			padding: 0 20px 0 21px;
 		}
 
 		@media @max490 {
-			padding-right: 25px;
-			padding: 9px 25px 9px 21px;
+			padding: 0 25px 0 21px;
 		}
 
 		::-webkit-scrollbar {
@@ -116,10 +136,6 @@
 		&-wrapper {
 			max-height: 100%;
 			overflow-y: scroll;
-		}
-
-		&_checked {
-			display: block;
 		}
 
 		p {
