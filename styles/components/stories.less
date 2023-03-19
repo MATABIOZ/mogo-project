@@ -3,6 +3,10 @@
 	&__wrapper {
 		width: 100%;
 		padding: 84px 16px;
+
+		@media @max1024 {
+			padding: 58px 16px;
+		}
 	}
 
 	&__inner {
@@ -17,5 +21,16 @@
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		column-gap: 30px;
+		row-gap: 30px;
+
+		@media @max1024 {
+			padding-top: 36px;
+			column-gap: 20px;
+		}
+
+		@media @max768 {
+			grid-template-columns: 1fr;
+			justify-items: center;
+		}
 	}
 }

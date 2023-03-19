@@ -4,6 +4,14 @@
 		width: 100%;
 		padding: 42px 16px;
 		background-color: @background-color-alabaster;
+
+		@media @max1024 {
+			padding: 28px 16px;
+		}
+
+		@media @max580 {
+			padding: 30px 16px 22px;
+		}
 	}
 
 	&__inner {
@@ -14,7 +22,33 @@
 	&__logos {
 		display: grid;
 		grid-template-columns: repeat(6, 1fr);
-		gap: 82px;
+		justify-items: center;
+		column-gap: 82px;
+
+		@media @max870 {
+			grid-template-columns: repeat(3, 1fr);
+			column-gap: 63px;
+		}
+
+		@media @max490 {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		li {
+
+			@media @max490 {
+
+				&:nth-child(3) {
+					grid-column-start: 1;
+					grid-column-end: 3;
+				}
+	
+				&:nth-child(6) {
+					grid-column-start: 1;
+					grid-column-end: 3;
+				}
+			}
+		}
 
 		a {
 			display: inline-block;
@@ -31,6 +65,10 @@
 
 		img {
 			width: 127px;
+
+			@media @max1024 {
+				width: 86px;
+			}
 		}
 	}
 }

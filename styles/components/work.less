@@ -4,6 +4,10 @@
 		margin: 0 auto;
 		max-width: 1980px;
 		padding-top: 84px;
+
+		@media @max1024 {
+			padding-top: 58px;
+		}
 	}
 
 	&__cards {
@@ -11,5 +15,19 @@
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		grid-template-rows: 1fr 1fr;
+
+		@media @max1024 {
+			padding-top: 28px;
+		}
+
+		@media @max768 {
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(3, 1fr);
+		}
+
+		@media @max490 {
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(5, 1fr);
+		}
 	}
 }

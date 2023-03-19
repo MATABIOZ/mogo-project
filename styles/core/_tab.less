@@ -1,0 +1,140 @@
+.tab {
+	display: flex;
+	flex-direction: column;
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border: 1px solid @background-color-silver-sand;
+	}
+
+	&__icon {
+		margin: 0 18px;
+
+		&::before {
+			font-size: 42px;
+			color: @text-color-morning-glory;
+
+			@media @max1024 {
+				font-size: 36px;
+			}
+		}
+	}
+
+	&__title {
+		padding: 31px 0;
+		width: 100%;
+		margin-left: 22px;
+
+		@media @max1024 {
+			padding: 28px 0;
+		}
+
+		h3 {
+			.font-sizes_700-24-28 ();
+			text-transform: uppercase;
+
+			@media @max1024 {
+				.font-sizes_700-18-21 ();
+			}
+
+			@media @max490 {
+				font-size: 14px;
+				line-height: 16px;
+			}
+		}
+	}
+
+	&__button {
+		margin: 0 14px;
+		transform: perspective(800px) rotateX(0);
+		
+		&_checked {
+			transform: perspective(800px) rotateX(180deg);
+		}
+
+		button {
+			background: none;
+			border: none;
+			padding: 0;
+			cursor: pointer;
+
+			&:hover::before {
+				filter: invert(30%);
+			}
+
+			&:active::before {
+				filter: invert(100%);
+			}
+		}
+
+		::before {
+			display: inline-block;
+			content: '';
+			transition: all linear .1s;
+			background-image: url('../../images/arrow.svg');
+			background-size: contain;
+			width: 42px;
+			height: 42px;
+
+			@media @max1024 {
+				width: 36px;
+				height: 36px;
+			}
+		}
+	}
+
+	&__text {
+		display: none;
+		padding: 18px 24px 18px 22px;
+		border: 1px solid @background-color-silver-sand;
+		border-top: none;
+		max-height: 162px;
+
+		@media @max1024 {
+			padding: 21px 20px 21px 21px;
+			max-height: 138px;
+		}
+
+		@media @max490 {
+			padding-right: 25px;
+			padding: 9px 25px 9px 21px;
+		}
+
+		::-webkit-scrollbar {
+			width: 7px;
+		}
+
+		::-webkit-scrollbar-track {
+			background-color: @background-color-wild-sand;
+		}
+		::-webkit-scrollbar-thumb {
+			background-color: @background-color-morning-glory;
+		}
+
+		&-wrapper {
+			max-height: 100%;
+			overflow-y: scroll;
+		}
+
+		&_checked {
+			display: block;
+		}
+
+		p {
+			padding-right: 54px;
+			.font-sizes_400-18-21 ();
+
+			@media @max1024 {
+				padding-right: 46px;
+				font-size: 14px;
+				line-height: 16px;
+			}
+
+			@media @max490 {
+				.font-sizes_400-13-15();
+			}
+		}
+	}
+}

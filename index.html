@@ -20,11 +20,11 @@
 							<img src="./images/mogo-header.png" alt="mogo-logo">
 						</div>
 						<ul class="header__nav-menu">
-							<li><a href="#">about</a></li>
-							<li><a href="#">service</a></li>
-							<li><a href="#">work</a></li>
-							<li><a href="#">blog</a></li>
-							<li><a href="#">contact</a></li>
+							<li><a href="#about">about</a></li>
+							<li><a href="#service">service</a></li>
+							<li><a href="#work">work</a></li>
+							<li><a href="#stories">blog</a></li>
+							<li><a href="#contact">contact</a></li>
 						</ul>
 						<div class="header__actives">
 							<div class="header__truck"><a href="#"></a></div>
@@ -32,6 +32,13 @@
 								<input id="search" type="search" name="search">
 								<label for="search"></label>
 							</div>
+						</div>
+						<div class="header__burger">
+							<button type="button">
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
 						</div>
 					</header>
 					<div class="banner__subtitle">
@@ -78,8 +85,27 @@
 				</div>
 			</div>
 		</div>
+		<aside class="sidebar">
+			<div class="sidebar__header">
+				<div class="header__logo">
+					<a href="#"><img src="./images/mogo-header.png" alt="mogo-logo"></a>
+				</div>
+				<div class="header__burger header__burger_checked">
+					<button type="button">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+				</div>
+			</div>
+			<div class="sidebar__nav-item"><a href="#about">about</a></div>
+			<div class="sidebar__nav-item"><a href="#service">service</a></div>
+			<div class="sidebar__nav-item"><a href="#work">work</a></div>
+			<div class="sidebar__nav-item"><a href="#stories">blog</a></div>
+			<div class="sidebar__nav-item"><a href="#contact">contact</a></div>
+		</aside>
 	</section>
-	<section class="about">
+	<section class="about" id="about">
 		<div class="container">
 			<div class="about__wrapper">
 				<div class="about__inner">
@@ -258,7 +284,7 @@
 						<span class="divider divider_red"></span>
 					</div>
 					<div class="devices__tablet-background">
-						<div class="devises__tablet-border">
+						<div class="devices__tablet-border">
 							<img src="./images/tablet-border-cut.png" alt="tablet">
 							<div class="devices__phone-background">
 								<div class="devices__phone-border"><img src="./images/phone-border.png" alt="phone"></div>
@@ -269,7 +295,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="service">
+	<section class="service" id="service">
 		<div class="container">
 			<div class="service__wrapper">
 				<div class="service__inner">
@@ -287,7 +313,9 @@
 					</div>
 					<div class="service__content">
 						<div class="service__image">
-							<img src="./images/service.jpg" alt="photo">
+							<div class="service__image-wrapper">
+								<img src="./images/service.jpg" alt="photo">
+							</div>
 						</div>
 						<div class="service__tabs">
 							<div class="tab">
@@ -479,7 +507,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="work">
+	<section class="work" id="work">
 		<div class="container">
 			<div class="work__wrapper">
 				<div class="section-header">
@@ -538,6 +566,7 @@
 					<div class="work-card">
 						<div class="work-card__image">
 							<img src="./images/work-image-6.jpg" alt="work-image">
+							<img src="./images/work-image-6-2.jpg" alt="work-image">
 							<div class="work-card__design">
 								<a href="#">creatively design</a>
 							</div>
@@ -617,7 +646,7 @@
 								<div class="client-card__profession">
 									<h5>photographer</h5>
 								</div>
-								<span class="divider divider_red divider_short"></span>
+								<span class="divider divider_red divider_short divider_short-increase"></span>
 								<div class="client-card__review">
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis proin varius vitae leo eget tincidunt duis amet. Et amet dis vel imperdiet volutpat mauris est leo cursus.</p>
 								</div>
@@ -634,7 +663,7 @@
 								<div class="client-card__profession">
 									<h5>photographer</h5>
 								</div>
-								<span class="divider divider_red divider_short"></span>
+								<span class="divider divider_red divider_short divider_short-increase"></span>
 								<div class="client-card__review">
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis proin varius vitae leo eget tincidunt duis amet. Et amet dis vel imperdiet volutpat mauris est leo cursus.</p>
 								</div>
@@ -651,7 +680,7 @@
 								<div class="client-card__profession">
 									<h5>photographer</h5>
 								</div>
-								<span class="divider divider_red divider_short"></span>
+								<span class="divider divider_red divider_short divider_short-increase"></span>
 								<div class="client-card__review">
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis proin varius vitae leo eget tincidunt duis amet. Et amet dis vel imperdiet volutpat mauris est leo cursus.</p>
 								</div>
@@ -668,7 +697,7 @@
 								<div class="client-card__profession">
 									<h5>photographer</h5>
 								</div>
-								<span class="divider divider_red divider_short"></span>
+								<span class="divider divider_red divider_short divider_short-increase"></span>
 								<div class="client-card__review">
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis proin varius vitae leo eget tincidunt duis amet. Et amet dis vel imperdiet volutpat mauris est leo cursus.</p>
 								</div>
@@ -679,7 +708,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="stories">
+	<section class="stories" id="stories">
 		<div class="container">
 			<div class="stories__wrapper">
 				<div class="stories__inner">
@@ -787,7 +816,7 @@
 		<div class="container">
 			<div class="footer__wrapper">
 				<div class="footer__inner">
-					<div class="footer__item">
+					<div class="footer__item" id="contact">
 						<div class="footer__logo">
 							<a href="#"><img src="./images/mogo-footer.png" alt="logo"></a>
 						</div>
@@ -803,14 +832,14 @@
 									<h5>Follow Us</h5>
 								</div>
 								<ul class="footer__social-logos">
-									<li><a href="#"></a></li>
-									<li><a href="#"></a></li>
-									<li><a href="#"></a></li>
-									<li><a href="#"></a></li>
-									<li><a href="#"></a></li>
-									<li><a href="#"></a></li>
-									<li><a href="#"></a></li>
-									<li><a href="#"></a></li>
+									<li><a href="https://www.facebook.com/" target="_blank"></a></li>
+									<li><a href="https://twitter.com/" target="_blank"></a></li>
+									<li><a href="https://www.instagram.com/" target="_blank"></a></li>
+									<li><a href="https://www.pinterest.com/" target="_blank"></a></li>
+									<li><a href="https://www.linkedin.com/" target="_blank"></a></li>
+									<li><a href="https://www.youtube.com/" target="_blank"></a></li>
+									<li><a href="https://dribbble.com/" target="_blank"></a></li>
+									<li><a href="https://www.tiktok.com/" target="_blank"></a></li>
 								</ul>
 							</div>
 						</div>
@@ -826,7 +855,9 @@
 						<a class="footer__blog-link" href="#">
 							<div class="blog-card">
 								<div class="blog-card__image">
-									<img src="./images/blog-image-1.jpg" alt="image">
+									<div class="blog-card__image-wrapper">
+										<img src="./images/blog-image-1.jpg" alt="image">
+									</div>
 								</div>
 								<div class="blog-card__text">
 									<div class="blog-card__title">
@@ -839,7 +870,9 @@
 						<a class="footer__blog-link" href="#">
 							<div class="blog-card">
 								<div class="blog-card__image">
-									<img src="./images/blog-image-2.jpg" alt="image">
+									<div class="blog-card__image-wrapper">
+										<img src="./images/blog-image-2.jpg" alt="image">
+									</div>
 								</div>
 								<div class="blog-card__text">
 									<div class="blog-card__title">
@@ -852,7 +885,9 @@
 						<a class="footer__blog-link" href="#">
 							<div class="blog-card">
 								<div class="blog-card__image">
-									<img src="./images/blog-image-3.jpg" alt="image">
+									<div class="blog-card__image-wrapper">
+										<img src="./images/blog-image-3.jpg" alt="image">
+									</div>
 								</div>
 								<div class="blog-card__text">
 									<div class="blog-card__title">
@@ -868,18 +903,18 @@
 							<h3>instagram</h3>
 						</div>
 						<ul class="instagram-card">
-							<li><a href="#"><img src="./images/instagram-image-1.jpg" alt="photo"></a></li>
-							<li><a href="#"><img src="./images/instagram-image-2.jpg" alt="photo"></a></li>
-							<li><a href="#"><img src="./images/instagram-image-3.jpg" alt="photo"></a></li>
-							<li><a href="#"><img src="./images/instagram-image-4.jpg" alt="photo"></a></li>
-							<li><a href="#"><img src="./images/instagram-image-5.jpg" alt="photo"></a></li>
-							<li><a href="#"><img src="./images/instagram-image-6.jpg" alt="photo"></a></li>
-							<li><a href="#"><img src="./images/instagram-image-7.jpg" alt="photo"></a></li>
-							<li><a href="#"><img src="./images/instagram-image-8.jpg" alt="photo"></a></li>
-							<li><a href="#"><img src="./images/instagram-image-9.jpg" alt="photo"></a></li>
+							<li><a href="https://www.instagram.com/" target="_blank"><img src="./images/instagram-image-1.jpg" alt="photo"></a></li>
+							<li><a href="https://www.instagram.com/" target="_blank"><img src="./images/instagram-image-2.jpg" alt="photo"></a></li>
+							<li><a href="https://www.instagram.com/" target="_blank"><img src="./images/instagram-image-3.jpg" alt="photo"></a></li>
+							<li><a href="https://www.instagram.com/" target="_blank"><img src="./images/instagram-image-4.jpg" alt="photo"></a></li>
+							<li><a href="https://www.instagram.com/" target="_blank"><img src="./images/instagram-image-5.jpg" alt="photo"></a></li>
+							<li><a href="https://www.instagram.com/" target="_blank"><img src="./images/instagram-image-6.jpg" alt="photo"></a></li>
+							<li><a href="https://www.instagram.com/" target="_blank"><img src="./images/instagram-image-7.jpg" alt="photo"></a></li>
+							<li><a href="https://www.instagram.com/" target="_blank"><img src="./images/instagram-image-8.jpg" alt="photo"></a></li>
+							<li><a href="https://www.instagram.com/" target="_blank"><img src="./images/instagram-image-9.jpg" alt="photo"></a></li>
 						</ul>
 						<div class="footer__all-photos">
-							<a href="#">see all photos</a>
+							<a href="https://www.instagram.com/" target="_blank">see all photos</a>
 						</div>
 					</div>
 				</div>
@@ -891,6 +926,7 @@
 			</div>
 		</div>
 	</footer>
+	<script src="./index.js"></script>
 </body>
 
 </html>

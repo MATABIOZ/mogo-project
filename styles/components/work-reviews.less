@@ -2,8 +2,18 @@
 
 	&__wrapper {
 		width: 100%;
-		padding: 42px 16px 42px;
+		padding: 42px 16px;
 		margin: 84px 0;
+
+		@media @max1024 {
+			margin: 58px 0;
+			padding: 28px 16px;
+		}
+
+		@media @max768 {
+			margin: 29px 0;
+			padding: 29px 16px;
+		}
 	}
 
 	&__inner {

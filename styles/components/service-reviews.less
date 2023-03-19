@@ -2,8 +2,16 @@
 
 	&__wrapper {
 		width: 100%;
-		padding: 42px 16px 42px;
+		padding: 42px 16px;
 		background-color: @background-color-alabaster;
+
+		@media @max1024 {
+			padding: 28px 16px;
+		}
+
+		@media @max768 {
+			padding: 29px 16px;
+		}
 	}
 
 	&__inner {

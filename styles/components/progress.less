@@ -1,12 +1,28 @@
 .progress {
-	padding: 11px 0 0;
+	padding-top: 11px;
 	width: 100%;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 30px;
 
+	@media @max1024 {
+		gap: 20px;
+	}
+
+	@media @max1024 {
+		padding-top: 29px;
+	}
+
+	@media @max660 {
+		padding-top: 4px;
+	}
+
 	&__item {
 		width: 100%;
+
+		@media @max580 {
+			padding-bottom: 40px;
+		}
 	}
 
 	&__line {
@@ -34,18 +50,36 @@
 		color: @text-color-citrine-white;
 		text-transform: uppercase;
 
+		@media @max1024 {
+			padding: 15px 0;
+		}
+
+		@media @max580 {
+			display: none;
+		}
+
 		&_active {
 			color: @text-color-white;
 		}
 
 		span {
 			.font-sizes_700-36-42 ();
+
+			@media @max1024 {
+				font-size: 24px;
+				line-height: 28px;
+			}
 		}
 
 		h4 {
 			.font-sizes_500-18-21 ();
 			padding-bottom: 5px;
 			margin-left: 4px;
+
+			@media @max1024 {
+				font-size: 14px;
+				line-height: 16px;
+			}
 		}
 	}
 }

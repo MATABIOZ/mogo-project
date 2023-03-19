@@ -1,0 +1,130 @@
+.work-card {
+
+	&:nth-child(6) {
+		
+		img:nth-child(2) {
+			display: none;
+		}
+	}
+
+	@media @max490 {
+
+		&:nth-child(1) {order: 1;}
+		&:nth-child(2) {order: 6;}
+		&:nth-child(3) {order: 2;}
+		&:nth-child(4) {order: 5;}
+		&:nth-child(5) {order: 3;}
+		&:nth-child(6) {
+			order: 7;
+			grid-column-start: 1;
+			grid-column-end: 3;
+
+			img {
+
+				&:nth-child(1) {
+					display: none;
+				}
+
+				&:nth-child(2) {
+					display: inline-block;
+				}
+			}
+		}
+		&:nth-child(7) {order: 4;}
+	}
+
+	&:nth-child(3) {
+		grid-column-start: 3;
+		grid-column-end: 4;
+		grid-row-start: 1;
+		grid-row-end: 3;
+
+		@media @max768 {
+			grid-column-start: 2;
+			grid-column-end: 3;
+			grid-row-start: 1;
+			grid-row-end: 4;
+		}
+	}
+
+	&__image {
+		position: relative;
+		height: 100%;
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__design {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: @background-color-gradient;
+		opacity: 0;
+		transition: all linear .2s;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		&:active {
+
+			a {
+				color: @text-color-shark;
+			}
+		}
+
+		a {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			text-decoration: none;
+			width: 100%;
+			height: 100%;
+			.font-sizes_700-24-28 ();
+			color: @text-color-white;
+			text-transform: uppercase;
+			padding: 11px 0;
+
+			@media @max1024 {
+				.font-sizes_700-18-21();
+			}
+
+			&::before {
+				content: @icon-cup;
+				.icon-styles ();
+				font-size: 42px;
+				padding: 37px 0 57px;
+
+				@media @max1024 {
+					font-size: 28px;
+					padding: 37px 0 39px;
+				}
+
+				@media @max580 {
+					font-size: 28px;
+					padding: 18px 0 19px;
+				}
+			}
+
+			&::after {
+				content: 'Lorem ipsum dolor sit';
+				.font-sizes_400-18-21();
+				text-transform: capitalize;
+				padding: 4px 0;
+
+				@media @max1024 {
+					font-size: 14px;
+					line-height: 16px;
+					padding-bottom: 15px;
+				}
+			}
+		}
+	}
+}
