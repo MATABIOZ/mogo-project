@@ -1,0 +1,86 @@
+.card {
+	max-width: 370px;
+	display: flex;
+	transition: all linear .2s;
+
+	@media @max400 {
+		max-width: 288px;
+	}
+
+	&:hover {
+		transform: scale(1.2);
+
+		@media @max580 {
+			transform: scale(1.1);
+		}
+	}
+
+	&__icon {
+		margin-right: 30px;
+
+		@media @max1024 {
+			margin-right: 25px;
+		}
+	}
+
+	::before {
+		font-size: 70px;
+		color: @text-color-morning-glory;
+
+		@media @max1024 {
+			font-size: 59px;
+		}
+
+		@media @max580 {
+			font-size: 57px;
+		}
+	}
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__title {
+		width: 100%;
+		padding: 12px 0;
+		margin-top: 9px;
+
+		@media @max1024 {
+			margin-top: 7px;
+			padding: 11px 0;
+		}
+
+		h4 {
+			.font-sizes_700-24-28();
+			text-transform: uppercase;
+
+			@media @max1024 {
+				margin-top: 7px;
+				.font-sizes_700-18-21();
+			}
+		}
+	}
+
+	&__description {
+		width: 100%;
+		padding: 19px 0;
+
+		@media @max1024 {
+			padding: 18px 0;
+		}
+
+		@media @max580 {
+			padding: 5px 0;
+		}
+
+		h5 {
+			.font-sizes_400-18-21 ();
+
+			@media @max1024 {
+				font-size: 14px;
+				line-height: 16px;
+			}
+		}
+	}
+}

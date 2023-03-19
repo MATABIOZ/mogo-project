@@ -8,6 +8,14 @@
 		background-position: center;
 		background-size: cover;
 		background-blend-mode: screen;
+
+		@media @max1024 {
+			padding: 28px 16px;
+		}
+
+		@media @max768 {
+			padding-bottom: 29px;
+		}
 	}
 
 	&__inner {
@@ -26,5 +34,20 @@
 		grid-template-rows: 1fr 1fr;
 		column-gap: 50px;
 		row-gap: 42px;
+
+		@media @max1024 {
+			padding-top: 28px;
+			column-gap: 54px;
+			row-gap: 28px;
+		}
+
+		@media @max768 {
+			padding-top: 28px;
+			row-gap: 29px;
+		}
+
+		@media @max580 {
+			grid-template-columns: 1fr;
+		}
 	}
 }

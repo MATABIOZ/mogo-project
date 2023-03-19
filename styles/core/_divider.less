@@ -1,0 +1,46 @@
+.divider {
+	height: 4px;
+	max-width: 170px;
+
+	&_white {
+		width: 100%;
+		background-color: @background-color-white;
+
+		@media @max1024 {
+			max-width: 115px;
+		}
+
+		@media @max660 {
+			max-width: 134px;
+		}
+	}
+	
+	&_red {
+		width: 100%;
+		background-color: @background-color-froly;
+
+		@media @max1024 {
+			max-width: 148px;
+		}
+
+		@media @max660 {
+			max-width: 134px;
+		}
+	}
+
+	&_short {
+		width: 70px;
+
+		@media @max1024 {
+			max-width: 47px;
+		}
+
+		&-increase {
+
+			@media @max768 {
+				max-width: 134px;
+				width: 100%;
+			}
+		}
+	}
+}

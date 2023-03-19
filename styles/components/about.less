@@ -3,6 +3,10 @@
 	&__wrapper {
 		width: 100%;
 		padding: 42px 16px 50px;
+
+		@media @max1024 {
+			padding: 29px 16px 10px;
+		}
 	}
 
 	&__inner {
@@ -18,5 +22,21 @@
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 30px;
+
+		@media @max1024 {
+			padding: 49px 0;
+			gap: 26px;
+		}
+
+		@media @max768 {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		@media @max660 {
+			padding: 16px 0 49px;
+			gap: 16px;
+		}
 	}
 }

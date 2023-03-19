@@ -1,0 +1,107 @@
+.slider {
+	display: flex;
+	flex-direction: column;
+
+	&__wrapper {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 12px;
+
+		@media @max1024 {
+			padding: 0 16px;
+		}
+
+		@media @max660 {
+			padding: 0;
+		}
+	}
+
+	&__inner {
+		margin: 0 40px;
+		max-width: 970px;
+		overflow: hidden;
+		display: flex;
+		justify-content: space-between;
+
+		@media @max660 {
+			margin: 0 15px;
+		}
+
+		@media @max490 {
+			margin: 0;
+		}
+	}
+
+	&__arrow-prev, &__arrow-next {
+		cursor: pointer;
+
+		@media @max580 {
+			display: none;
+		}
+
+		&::before {
+			content: '';
+			display: inline-block;
+			background-image: url('../../images/arrow.svg');
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: 42px;
+			height: 42px;
+			transition: all linear .1s;
+
+			@media @max1024 {
+				width: 28px;
+				height: 28px;
+			}
+		}
+
+		&:hover::before {
+			filter: invert(30%);
+		}
+
+		&:active::before {
+			filter: invert(100%);
+		}
+	}
+
+	&__arrow-prev {
+
+		&::before {
+			transform: rotate(90deg);
+		}
+	}
+
+	&__arrow-next{
+
+		&::before {
+		transform: rotate(-90deg);
+		}
+	}
+
+	&__dots {
+		width: 100%;
+		padding-top: 25px;
+		display: none;
+		justify-content: center;
+
+		@media @max768 {
+			display: flex;
+		}
+	}
+
+	&__dot {
+		margin: 0 10px;
+		width: 10px;
+		height: 10px;
+		border: 1px solid @background-color-silver-sand;
+		border-radius: 100%;
+		display: block;
+
+		&_active {
+			background-color: @background-color-silver-sand;
+		}
+	}
+}

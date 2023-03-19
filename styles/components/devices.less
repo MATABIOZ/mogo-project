@@ -8,6 +8,14 @@
 		background-position: center;
 		background-size: cover;
 		background-blend-mode: screen;
+
+		@media @max1024 {
+			padding: 29px 16px 39px;
+		}
+
+		@media @max580 {
+			padding: 29px 16px 25px;
+		}
 	}
 
 	&__inner {
@@ -28,6 +36,25 @@
 		display: flex;
 		justify-content: center;
 		position: relative;
+
+		@media @max1024 {
+			margin: 37px 0 0;
+		}
+
+		@media @max580 {
+			margin: 35px 0 0;
+		}
+	}
+
+	&__tablet-border img {
+
+		@media @max1024 {
+			max-height: 356px;
+		}
+
+		@media @max580 {
+			max-height: 219px;
+		}
 	}
 
 	&__phone-background {
@@ -35,8 +62,19 @@
 		background-image: url(../../images/phone-background.png);
 		background-repeat: no-repeat;
 		background-position: top;
+		background-size: contain;
 		bottom: 0;
 		right: 0;
 		transform: translate(42px, 99px);
+
+		@media @max1024 {
+			max-width: 136px;
+			transform: translate(28px, 69px);
+		}
+
+		@media @max580 {
+			max-width: 85px;
+			transform: translate(-25px, 57px);
+		}
 	}
 }

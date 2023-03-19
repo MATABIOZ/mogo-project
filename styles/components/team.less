@@ -3,6 +3,14 @@
 	&__wrapper {
 		width: 100%;
 		padding: 84px 16px;
+
+		@media @max1024 {
+			padding: 57px 16px 58px;
+		}
+
+		@media @max768 {
+			padding: 29px 16px 58px;
+		}
 	}
 
 	&__inner {
@@ -18,5 +26,21 @@
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 30px;
+
+		@media @max1024 {
+			padding-top: 49px;
+			gap: 20px;
+		}
+
+		@media @max768 {
+			padding-top: 18px;
+		}
+
+		@media @max660 {
+			padding-top: 18px;
+			gap: 31px;
+			grid-template-columns: 1fr;
+			justify-items: center;
+		}
 	}
 }

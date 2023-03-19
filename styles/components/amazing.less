@@ -3,6 +3,10 @@
 	&__wrapper {
 		width: 100%;
 		padding: 42px 16px 91px;
+
+		@media @max1024 {
+			padding: 29px 16px 58px;
+		}
 	}
 
 	&__inner {
@@ -19,5 +23,21 @@
 		column-gap: 30px;
 		row-gap: 140px;
 		padding-top: 78px;
+
+		@media @max1024 {
+			padding-top: 66px;
+			column-gap: 25px;
+			row-gap: 58px;
+		}
+
+		@media @max768 {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media @max580 {
+			grid-template-columns: repeat(1, 1fr);
+			justify-items: center;
+			row-gap: 36px;
+		}
 	}
 }
